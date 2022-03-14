@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "588728d4-7fde-4bdc-aad3-31d756ee9817",
+		"name": "/user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USER REG",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"action\": \"register\",\r\n    \"user_name\": \"applicant4\",\r\n    \"password\": \"123\",\r\n    \"user_type\": \"applicant\",\r\n    \"phone_number\": \"13600002222\",\r\n    \"mail\": \"1@q.com\",\r\n    \"avatar\": \"pic.com\",\r\n    \"desc\": \"这是一段个人简介\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER LOGIN",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"action\": \"login\",\r\n    \"user_name\": \"applicant1\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER INFO",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/user/05b6a3d7620badf900500f337e0ee53e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"05b6a3d7620badf900500f337e0ee53e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE USER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX0lkIjoiZWQ5ZDBjZWI2MjJhMDRiOTAwODRhNjhhM2I1ZTZlMWYiLCJ1c2VyX25hbWUiOiJhcHBsaWNhbnQ0IiwidXNlcl90eXBlIjoiYXBwbGljYW50IiwiaWF0IjoxNjQ3MDkyODg1LCJleHAiOjE2NDc1MjQ4ODV9.KlHDrBJjektSIoWWIn-rBYXuhF8Vm5iasKiYnyICCVc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"avatar\": \"u are so cool\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX0lkIjoiMDViNmEzZDc2MjBiY2I5ODAwNTA0M2ZkNGY3MmU0MTIiLCJ1c2VyX25hbWUiOiJhcHBsaWNhbnQxIiwidXNlcl90eXBlIjoiYXBwbGljYW50IiwiaWF0IjoxNjQ0OTQwMTg0LCJleHAiOjE2NDUzNzIxODR9.e4oQLN11tAo-GGAJkTmloMb8vj-PQ0fxHsR8KcXkn_E",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

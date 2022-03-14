@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "5a240b93-7bc7-4e0b-9c1b-254be460e70d",
+		"name": "/jobs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ALL JOBS",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/jobs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ONE JOBS",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/jobs/05b6a3d76225d2510081e545135a4e9d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs",
+						"05b6a3d76225d2510081e545135a4e9d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL APPLIED JOBS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX0lkIjoiMDViNmEzZDc2MjI3OTRmNDAwODQ5NjgzNzFkNWE0NWEiLCJ1c2VyX25hbWUiOiJhcHBsaWNhbnQxIiwidXNlcl90eXBlIjoiYXBwbGljYW50IiwiaWF0IjoxNjQ3MTAzNzIzLCJleHAiOjE2NDc1MzU3MjN9.2pRHmpgIbaj0XV7XUuatIuXSeJ3bT0e_WOKPjriw5iM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/jobs/applied_jobs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs",
+						"applied_jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APPLIED A JOBS",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"job_Id\": \"ed9d0ceb620b4ea6004d174a64a74e72\",\r\n    \"job_name\": \"初中几何教师\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/jobs/applied_jobs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs",
+						"applied_jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL STARED JOBS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX0lkIjoiMDViNmEzZDc2MjI3OTRmNDAwODQ5NjgzNzFkNWE0NWEiLCJ1c2VyX25hbWUiOiJhcHBsaWNhbnQxIiwidXNlcl90eXBlIjoiYXBwbGljYW50IiwiaWF0IjoxNjQ3MDgwNzg1LCJleHAiOjE2NDc1MTI3ODV9.uzdN3G6qPMeev7WHQAKnhB_7tWQYgxMxCs7cLpDIWEY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/jobs/stared_jobs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs",
+						"stared_jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STARED A JOBS",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX0lkIjoiMDViNmEzZDc2MjI3OTRmNDAwODQ5NjgzNzFkNWE0NWEiLCJ1c2VyX25hbWUiOiJhcHBsaWNhbnQxIiwidXNlcl90eXBlIjoiYXBwbGljYW50IiwiaWF0IjoxNjQ3MDA5NDk4LCJleHAiOjE2NDc0NDE0OTh9.Jdzm6KAEFtmzYbDcNsOMQmttk-zVeyqw159_r2ZNa8s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"job_Id\": \"ed9d0ceb620b4ea6004d174a64a74e72\",\r\n    \"job_name\": \"初中几何教师\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/jobs/stared_jobs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs",
+						"stared_jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL HIRING JOBS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX0lkIjoiZWQ5ZDBjZWI2MjBiY2M5MTAwNGRmYjYwNzIxZGRjYzIiLCJ1c2VyX25hbWUiOiJocjEiLCJ1c2VyX3R5cGUiOiJociIsImlhdCI6MTY0NjY0NTY4NSwiZXhwIjoxNjQ3MDc3Njg1fQ.Je6UhiDwGdOV5PtJNXN5qtqyz1jTcwRbxt70rkHl-MU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/jobs/hiring_jobs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs",
+						"hiring_jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PROCESS A JOB APPLICATION",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"job_Id\": \"ed9d0ceb620b4ea6004d174a64a74e72\",\r\n    \"applicant_Id\": \"05b6a3d7620bcb98005043fd4f72e412\",\r\n    \"result\": \"passed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/jobs/hiring_jobs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs",
+						"hiring_jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD JOBS ONCE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX0lkIjoiZWQ5ZDBjZWI2MjBiY2M5MTAwNGRmYjYwNzIxZGRjYzIiLCJ1c2VyX25hbWUiOiJocjEiLCJ1c2VyX3R5cGUiOiJociIsImlhdCI6MTY0NzE1NjU3MywiZXhwIjoxNjQ3NTg4NTczfQ.yCQ3xo334JiTCuGgWiwr7HzQhVi_0L2QRwVg0kuyY1E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"job_name\": \"test2\",\r\n    \"city\": \"gz\",\r\n    \"address\": \"gzdd\",\r\n    \"work_type\": \"兼职\",\r\n    \"salary\": 5000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/jobs/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jobs",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX0lkIjoiZWQ5ZDBjZWI2MjBiY2M5MTAwNGRmYjYwNzIxZGRjYzIiLCJ1c2VyX25hbWUiOiJocjEiLCJ1c2VyX3R5cGUiOiJociIsImlhdCI6MTY0NDk0NDE5NiwiZXhwIjoxNjQ1Mzc2MTk2fQ.yuPP9_4J5Y9X2oRMGL5cljHWXr3UNX8v8A9KHY3hm2w",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
